@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JIRUI-PORTFOLIO</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+    <!-- ✅ 放在 <head> 里的图标库链接（这是最新版且稳定的） -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-7I74GPAzAVxG1jXrK+MfFLWxQAHHRgMjG5q4U5ZKDJrhz6U0nU9hpxlo+MshW4n2gT7g2uVxlEkZHe+pXbKeTg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <nav id="desktop-nav">
+        <!-- <div class="logo">logo-picture</div> -->
+        <div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav class="hamburger-nav">
+        <!-- <div class="logo">logo-picture</div> -->
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="#contact"onclick="toggleMenu()">Contact</a></li>
+            </div>
+        </div>
+    </nav>
+    <section id="profile">
+        <div class="section__pic-container-profile">
+            <img src="assets/personal_animation_ip.png" alt="JIRUI-ANIMATION-IP" id="profile img ">
+        </div>
+        <div class="section__text">
+            <p class="section__text__p1">Hello, I'm</p>
+            <h1 class="title self-introduction">JIRUI</h1> 
+            <p class="section__text__p2">Environmental Engineering Student <br> GIS, Technology and Literature Enthusiast</p>
+            <p class="section__text__p3"> Lifelong Learner <br> Curious about everything, learning a bit of this and that.</p>
+            <div class="btn-container">
+                <button class="btn btn-color-2" onclick="window.open('assets/')">Download CV</button>
+                <button class="btn btn-color-1" onclick="location.href='./#contact'">Contact Info</button>
+            </div>
+            <div id="social-container">
+                <!-- Social icons like GitHub -->
+                <img width="48" height="48" src="https://img.icons8.com/fluency/48/github.png" alt="My github profile" class="icon" onclick="window.open('https://github.com/RUIJI2024', '_blank')"/>
+            </div>
+        </div>
+        
+       
+    </section>
+    <section id="about">
+        <!-- About Section 标题 -->
+         <p class="section__text__p1" >Get To Know More</p>
+         <h1 class="title">About Me</h1>
+         <div class="section-container">
+          <div class="section__pic-container">
+            <img src="./assets/profile.png" alt="Profile Picture" class="about-pic" >
+          </div>        
+          <div class="about-details-container">
+            <div class="about-containers">
+              <div class="details-container">
+                <img width="30" height="30" src="https://img.icons8.com/fluency-systems-filled/50/education.png" alt="education"/>
+                <h3>Education</h3>
+                <p>BS. Environmental Engineering(2022-2026)<br>China Minzu University </p>
+              </div>
+              <div class="details-container">
+                <img width="30" height="30" src="https://img.icons8.com/windows/32/admin-settings-male.png" alt="admin-settings-male"/> 
+                <h3>Skills</h3>
+                <p>CET-6<br>ARCGIS<br>HTML CSS and Javascript<br>Python(learning)</p>
+              </div>
+            </div>
+            <hr>
+            <div class="text-container">
+              <p>
+                As a third-year Environmental Engineering student, I am driven by a strong curiosity and a passion for learning. 
+                With a keen interest in GIS, technology, and sustainability, I continuously seek to expand my knowledge and explore new areas. My ability to adapt and learn quickly allows me to approach challenges with an open mind and innovative solutions. Alongside my intellectual pursuits, I maintain a positive and optimistic outlook, embracing every opportunity to grow and contribute.
+              </p>
+            </div>
+          </div>
+          <a href="#projects">
+            <img width="64" height="64" src="https://img.icons8.com/wired/64/chevron-down.png" alt="chevron-down" class="icon_arrow"/>
+          </a>
+         </div>
+        
+         
+    </section>
+    <section id="projects">
+      <p class="section__text__p1">Browse my Projects</p>
+      <h1 class="title">Projects</h1>
+      <div class="experiecxe-details-container">
+        <div class="about-containers" >
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="./assets/project-1-cover.jpg" alt="project 1"
+              class="project-img"
+              width="300px">
+            </div>
+            <h2 class="experience-sub-title project-title">Project 1-Environmental Sensitivity Analysis Report</h2>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn" onclick="location.href='./assets/Project-1-玉龙纳西自治县报告_23-27.pdf'"">
+                Click to view
+              </button>
+    
+            </div>
+            
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="./assets/project-2-cover.png" alt="project 2"
+              class="project-img"
+              width="300px">
+            </div>
+            <h2 class="experience-sub-title project-title">Project 2-Study on the Coordinated Development of Urbanization Level and Ecosystem Service Patterns in Xinjiang, China </h2>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn" onclick="location.href='./assets/Project-2.pdf'"">
+                Click to view
+              </button>
+    
+            </div>
+            
+          </div>
+        </div>
+        <a href="#contact">
+          <img width="64" height="64" src="https://img.icons8.com/wired/64/chevron-down.png" alt="chevron-down" class="icon_arrow"/>
+        </a>
+      </div>
+    </section>
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title"> Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/new-post.png" alt="email icon" 
+          class="icon contact-icon"
+          />
+          <p><a href="mailto:examplemail@gmail.com">Send Email</a></p>
+
+          <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/apple-phone.png" alt="apple-phone" class="icon contact-icon"/>
+          <p><a href="#" onclick="copyPhoneNumber()">Copy Phone Number</a></p>
+
+          <script>
+            function copyPhoneNumber() {
+                const phoneNumber = "18709099931";  
+                navigator.clipboard.writeText(phoneNumber).then(function() {
+                    alert("电话号码已复制到剪贴板！");  // 复制成功后的提示
+                }).catch(function(err) {
+                    alert("复制失败，请手动复制。");  // 如果复制失败的提示
+                });
+            }
+        </script>
+          <img width="50" height="50" src="https://img.icons8.com/ios/50/weixing.png" alt="weixing" class="icon contact-icon"/>
+          <p><a onclick="copyWeChatID()">Copy WeChatID</a></p>
+          <script>
+            function copyWeChatID() {
+                const weChatID = "jr298544094";  // 将这里的 "your_wechat_id" 替换为你的实际微信号
+                navigator.clipboard.writeText(weChatID).then(function() {
+                    alert("微信号已复制到剪贴板！");  // 复制成功后的提示
+                }).catch(function(err) {
+                    alert("复制失败，请手动复制。");  // 如果复制失败的提示
+                });
+            }
+        </script>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        </div>
+      </nav>
+      <p>&copy; <span id="year"></span> JIRUI. All rights reserved.</p>
+      <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+      </script>
+
+    </footer>
+    <script src="script.js"></script>    
+
+
+</body>
+</html>

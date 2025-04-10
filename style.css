@@ -1,0 +1,450 @@
+/* 通用设计 */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.self-introduction {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 400;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+  
+  section {
+    padding: 80px 20px;
+    scroll-margin-top: 100px; /* 避免锚点被导航栏遮住 */
+  }
+  
+/* 段落颜色 */
+p{
+    color:rgb(85,85,85) ;
+}
+/* 跳转 */
+a, .btn{
+    transition: all 300ms ease
+}
+/* 电脑端导航 */
+nav,
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style-type: none;
+    font-size: 1.5rem;
+    justify-content: space-around;
+    align-items: center;
+    height: 17vh;
+}
+
+/* 手机端导航 */
+@media (max-width: 768px) {
+    #desktop-nav {
+        display: none;  /* 隐藏桌面版导航 */
+    }
+
+    .hamburger-nav {
+        display: block;  /* 显示移动端导航 */
+    }
+}
+
+/* 电脑端导航 */
+@media (min-width: 769px) {
+    #desktop-nav {
+        display: flex;  /* 显示桌面版导航 */
+    }
+
+    .hamburger-nav {
+        display: none;  /* 隐藏移动端导航 */
+    }
+}
+
+
+  a{
+    color: black;
+    text-decoration:none ;
+    text-decoration-color: white;
+
+  }
+
+  a:hover{
+    color: grey;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    text-decoration-color:rgb(181,181,181) ;
+  }
+.logo{
+    font-size: 2rem;
+}
+.logo:hover{
+    cursor:default ;
+}
+/* hambuger menu*/
+#hamburger-nav{
+    display: none;
+}
+.hamburger-menu{
+    position: relative;
+    display: inline-block;
+}
+.hamburger-icon{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
+    
+}
+.hamburger-icon span{
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transition: all 0.3s ease-in-out;
+}
+.menu-links{
+    position:absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    width: fit-content;
+    max-height:0 ;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+.menu-links a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+.menu-links li{
+    list-style: none;
+}
+.menu-links.open{
+   max-height: 300px; 
+}
+
+.hamburger-icon.open span:first-child{
+    transform: rotate(45deg) translate(10px,5px);
+}
+.hamburger-icon.open span:nth-child(2){
+    opacity:0;
+}
+.hamburger-icon.open span:last-child{
+    transform: rotate(-45deg) translate(10px,-5px);
+}
+.hamburger-icon span:first-child{
+    transform: none;
+}
+.hamburger-icon span:first-child{
+    opacity: 1;
+}
+.hamburger-icon span:first-child{
+    transform: none;
+}
+/* 让 hamburger 菜单出现在右上角 */
+.hamburger-menu {
+    position: fixed;
+    top: 1rem; /* 设置距离顶部的距离 */
+    right: 1rem; /* 设置距离右边的距离 */
+    z-index: 1000; /* 确保它显示在最前面 */
+}
+/* section */
+section{
+    padding-top:4vh ;
+    height: 96vh;
+    margin: 0 10rem;
+    box-sizing: border-box;
+    min-height: fit-content;
+}
+.section-container{
+    display: flex;
+}
+/* profile section */
+/* 修改 section 部分 */
+#profile {
+    display: flex; /* 设置为flex布局 */
+    justify-content: center;
+    gap: 3rem; /* 两个元素之间的间隔 */
+    height: 100vh; /* 设置为100vh，让容器充满整个视口 */
+    align-items: flex-start; /* 让内容顶部对齐 */
+    margin-top: 5vh;
+    flex-direction: row;
+    height: 1140;
+}
+.section__pic-container{
+    margin-top: 2vh;
+}
+#profile img {
+    width: 100%; /* 让图片宽度占满父容器 */
+    height: auto; /* 保持图片比例 */
+    object-fit: cover; /* 让图片填满容器，裁剪多余部分 */
+    align-self: flex-start; /* 确保图片顶部对齐 */
+    margin-top: 1%;
+}
+.section__pic-container {
+    display: flex;
+    height: 50vh; /* 高度占据视口的一半 */
+    width: 50vw; /* 宽度占据视口的一半 */
+    justify-content: center;
+    align-items: center; /* 图片居中 */
+    overflow: hidden; /* 隐藏超出容器的部分 */
+}
+
+/* 调整图片大小，保持比例，填充容器 */
+.section__pic-container img {
+    width: 100%; /* 让图片宽度占满容器 */
+    height: 100%; /* 让图片高度占满容器 */
+    object-fit: cover; /* 确保图片裁剪后不失真 */
+}
+@media (max-width: 768px) {
+    .section__pic-container img {
+        display: none; /* 可能会导致图片在手机模式下被隐藏 */
+    }
+}
+
+
+/* 修改 section__text 的布局 */
+.section__text {
+    width: 100%;
+    max-width: 700px; /* 控制最大宽度 */
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* 垂直居中 */
+    position: relative;/* 必须设置为 relative，才能让绝对定位相对于它 */
+    max-height: 80vh; /* 限制最大高度为视口的80% */
+
+}
+
+/* 进一步细化文字样式 */
+.section__text__p1,
+ .section__text__p2,
+ .section__text__p3 { 
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem; /* 增加段落间距 */
+    width: 100%;
+    white-space: normal;
+    word-break: break-word;
+}
+.section__text__p2,
+.section__text__p3 {
+    font-size: 1.6rem; /* 调小一点的字体 */
+}
+.title {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
+.title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+.title{
+    font-size: 3rem;
+    text-align: center;
+}
+
+.social-container{
+    display: flex;
+    justify-content: center;
+    margin-top:  1rem;
+    gap: 1rem;
+}
+/* icons */
+.icon{
+    cursor: pointer;
+    height: 2rem;
+
+}
+/* buttons */
+.btn-container{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+.btn{
+    font-weight: 600;
+    transition: all 300ms ease;
+    padding: 1rem;
+    width: 8rem;
+    border-radius: 2rem;
+}
+.btn-color-1,
+.btn-color-2{
+    border: rgb(53,53,53) 0.1rem solid;
+}
+
+.btn-color-1:hover,
+.btn-color-2:hover{
+    cursor: pointer;
+}
+.btn-color-1,
+.btn-color-2:hover{
+    background: rgb(53,53,53);
+    color: white;
+}
+.btn-color-1:hover{
+    background: rgb(0,0,0);
+}
+.btn-color-2:hover{
+    border: rgb(255,255,255) 0.1rem solid;
+}
+.btn-container{
+    gap: 1rem;
+}
+
+/* ABOUT SECTION */
+#about{
+    position: relative;
+    height: 1140;
+}
+.about-containers{
+    gap:2rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+.about-details-container{
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 2rem;
+    max-width: 800px;
+}
+.about-containers,.about-details-container{
+    display: flex;
+}
+.about-pic{
+    border-radius: 2rem;
+}
+.arrow{
+    position: absolute;
+    right: -5rem;
+    bottom: 2.5rem;
+}
+.section__text__p1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.icon_arrow{
+    position: absolute;
+    right: -5rem;
+    bottom: 6.0rem;
+    width: 40px; /* 修改第127行 */
+    height: 40px; /* 修改第128行 */
+}
+.details-container{
+    padding:1.5rem;
+    flex: 1;
+    background-color: white;
+    border-radius: 2rem;
+    border:rgb(53,53,53) 0.1rem solid;
+    border-color: rgb(163,163,163);
+    text-align: center;
+}
+.section-container{
+    gap: 4rem;
+    height: 50%;
+    max-width: 100%;
+    
+
+}
+.section__pic-container{
+    width: 180%;
+    height: auto;
+    object-fit: cover;
+    align-self: flex-start;
+    margin-top: 1%;
+}
+#profile img{
+    width: 100%;
+}
+
+/* Projects section */
+#projects{
+    position: relative;
+    height: auto;
+}
+.color-container{
+    border-color: rgb(163,163,163);
+    background: rgb(250,250,250);
+}
+.project-img{
+    border: radius 2rem;
+    width: 90%;
+    height: 90%;
+}
+.project-title{
+    margin:1rem;
+    color: black;
+}
+.project-btn{
+    color: black;
+    border-color: rgb(163,163,163);
+}
+
+.about-pic {
+    width: 300px;   
+    height: 300px; 
+  } 
+
+/* CONTACT */
+#contact{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: auto;
+}
+.contact-info-upper-container{
+    display:flex;
+    justify-content: center;
+    border-radius: 2rem;
+    border: rgb(53,53,53) 0.1rem solid ;
+    border-color: rgb(163,163,163);
+    background: (250,250,250);
+    margin: 10rem auto;
+    height: 6rem;
+    width: 30rem;
+    /* padding: 0.5em; */
+}
+
+.contact-info-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin:1rem;
+    height: auto;
+}
+.contact-info-container p{
+    font-size: larger;
+}
+.contact-icon{
+    cursor: default;
+}
+.footer{
+    height:26vh;
+    margin:1rem;
+
+}
+footer p{
+    text-align: center;
+}
